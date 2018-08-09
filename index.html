@@ -1,0 +1,68 @@
+<html>
+	<head>
+		<link href="https://fonts.googleapis.com/css?family=Bangers|Carter+One|Caveat|Changa+One|Rammetto+One" rel="stylesheet">
+	</head>
+	<style>
+		body {
+			text-align: center;
+			max-width: 500px;
+			margin: 0 auto;
+		}
+		.card {
+			border: 10px solid #fa9a80;
+			height: 300px;
+			background-color: #fa9a80;
+			color: #f2ded4;
+		}
+		.card:hover {
+  			border: 10px solid #f2ded4;
+  			background-color: #f2ded4;
+  			color: #fa9a80;
+		}
+		.content {
+			margin-top: 10%;
+		}
+		.note {
+			font-family: 'Changa One', cursive;
+			margin-top: 60px;
+			text-align: center;
+			padding: 10px;
+		}
+		.typerson {
+			font-size: 30px;
+		}
+		#tytext {
+			font-size: 30px;
+			padding: 10px;
+			font-family: 'Caveat', cursive;
+		}
+	</style>
+	<body>
+		<div class="content">
+			<div class="card">
+				<div class="note">
+					<div class="typerson"> Dear Friend </div>
+					<div id="tytext">
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script>
+		window.onload = function(){
+			tyWriter();
+		};
+
+		var i = 0;
+		var note = 'Thank you so much for being my friend! I\'m super grateful for what we have. Kind regards, Kendra';
+		var speed = 70;
+
+		function tyWriter() {
+		  if (i < note.length) {
+		    document.getElementById("tytext").innerHTML += note.charAt(i);
+		    i++;
+		    setTimeout(tyWriter, speed);
+		  } 
+		}
+	</script>
+</html>
